@@ -23,6 +23,7 @@ less pronounced in larger precincts.
 
 After the summary is will print per-precinct results. For each precinct it will
 print
+
 1. The precinct's name;
 2. The actual number of votes the candidate received;
 3. The expected number of votes the candidate received;
