@@ -18,7 +18,8 @@ class ContestRegression(object):
 
   def Load(self, filename):
     with open(filename, 'r') as fp:
-      csvreader = csv.reader(fp, delimiter=self._GetDelimiter())
+      fp_nonulls = (line.replace('\0','0') for line in fp)
+      csvreader = csv.reader(fp_nonulls, delimiter=self._GetDelimiter())
       for row in csvreader:
         self._ProcessOneLine(row)
 #    print('%4d %4d %4d %4d' % (len(self._independent_data),
